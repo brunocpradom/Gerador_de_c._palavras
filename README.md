@@ -1,2 +1,2 @@
-# Gerador_de_ca-a_palavras
+# Gerador_de_caça_palavras
 Script gerador de caça palavras
