@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%block title%}Acervo{% endblock%}
+
+
+{%block content%}
+
+Lista de caça-palavras disponíveis<br>
+<ul>
+    {% for file in files%}
+        <li><a href={{file}}>{{file.split('/')[-1]}}</a></li>
+    {%endfor%}
+</ul>
+
+
+
+{%endblock%}

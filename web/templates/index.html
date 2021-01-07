@@ -1,0 +1,88 @@
+{%extends 'base.html'%}
+{%block title%}Caça-palavras{% endblock%}
+
+
+{%block content%}
+<div class="container">
+
+    <div class="row">
+
+     
+
+      <div class="col-sm">
+        <br>
+        <form class ='row g-3 needs-validation 'action = "#" method = 'post' novalidate>
+
+          <label for="validationCustom01" class="form-label">Lista de palavras</label>
+          <input type="text" class="form-control" id="validationCustom01" placeholder = 'ex:Brasil,Portugal' name = 'nm' value="" required>
+          <br>
+          <br>
+
+          <label for="validationCustom02" class="form-label">Dica do caça-palavras</label>
+          <input type="text" class="form-control" id="validationCustom02" placeholder = 'ex:Encontre dois países' name = 'dica' value="" required>
+          <br>
+          <br>
+
+          <label for="validationCustom03" class="form-label">Nome do arquivo</label>
+          <input type="text" class="form-control" id="validationCustom03" placeholder = 'ex:paises' name = 'arquivo' value="" required>
+          <br>
+          <br>
+          
+          
+            
+            
+              <label for="validationCustom04" class="form-label">Dimensões</label>
+              <select class="form-control" name = 'dimensoes' id="validationCustom04" required >
+                <option selected disabled value="">...</option>
+                <option value = '20'>20 X 20</option>
+                <option value = '30'>30 X 30</option>
+              </select>
+             
+           
+            
+          
+            <br>
+            <br>
+            <br>
+            
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit" >Gerar</button>
+            </div>
+        
+            
+        
+        </form>
+        <script>
+          // Example starter JavaScript for disabling form submissions if there are invalid fields
+          (function () {
+            'use strict'
+          
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+          
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+              .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                  if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                  }
+          
+                  form.classList.add('was-validated')
+                }, false)
+              })
+          })()
+        </script>
+      </div>
+      <div class="col-sm">
+        
+      </div>
+      <div class="col-sm">
+        
+      </div>
+    </div>
+  </div>
+
+
+{%endblock%}
